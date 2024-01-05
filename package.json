@@ -1,8 +1,8 @@
 {
   "name": "currencify",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A library for returning formatted currencies",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
