@@ -24,7 +24,7 @@ export class Currencify {
     formatCurrency () {
         try {
 
-            if (!(this.currency?.country) || !this.regex.test(this.amount)) {
+            if (!(this.currency?.country) || this.regex.test(this.amount)) {
               this.invalid = true;
               throw Error("Invalid Input Format");
 
@@ -36,7 +36,7 @@ export class Currencify {
             }
             
         } catch (error) {
-            let err = "Currencify Error: " + error;
+            let err = "Currencify " + error;
           console.log(err);
           return  err;
         }

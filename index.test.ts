@@ -13,6 +13,7 @@ describe("instantiation of the Currencify class", () => {
     });
 
     test("format of inputted amount", () => {
-        
-    })
+        const result = instance.formatCurrency();
+        expect(result).toEqual("₦1000.00k");
+    });
 })
