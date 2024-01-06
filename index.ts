@@ -1,25 +1,46 @@
 import { store } from "./store";
+import { Currency } from "./type";
 
-class Currencify {
+export class Currencify {
     invalid:boolean = false;
-    constructor (private country:string,private amount:string) {
-        try {
-            if(!(country in store)) {
-                this.invalid = true;
-            } else if () {
-    
-            }
-            
-        } catch (error) {
-          console.log("Currencify Error: " + error)  
-        }
+    prefix:string = "";
+    suffix:string = "";
+    currency:Currency = {
+        start:"",
+        end:"",
+        country:""
+    };
 
+    regex = /^[A-Za-z !@#$%^&*()_+={}[\]:;<>,?~\\/-]+$/;
+
+    constructor (private country:string, private amount:string) {
+        store.forEach((val) => {
+            if(val.country.toLocaleLowerCase() === this.country.toLocaleLowerCase()) {
+                this.currency = val;
+            }
+        });
     }
 
     formatCurrency () {
-        return "₦1,000.00k";
+        try {
+
+            if (!(this.currency?.country) || !this.regex.test(this.amount)) {
+              this.invalid = true;
+              throw Error("Invalid Input Format");
+
+            } else {
+                this.prefix = this.currency?.start ?? "";
+                this.suffix = this.currency?.end ?? "";
+                return this.prefix + this.amount + this.suffix;
+
+            }
+            
+        } catch (error) {
+            let err = "Currencify Error: " + error;
+          console.log(err);
+          return  err;
+        }
     }
 }
 
-export default Currencify;
 

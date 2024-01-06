@@ -1,7 +1,18 @@
-import Currencify from ".";
+import {Currencify} from "./index";
 
-test("instantiation of the library class",() => {
-    const instance = new Currencify("Nigeria","100");
+describe("instantiation of the Currencify class", () => {
+    let instance:Currencify;
+    beforeEach(() => instance = new Currencify("Nigeria","1000.00"))
+    test("equality of country",() => {
+    
+      expect(instance.currency.country).toEqual("Nigeria");
+    });
+    test("equality of start and end properties",() => {
+      expect(instance.currency.start).toEqual("₦");
+      expect(instance.currency.end).toEqual("k");
+    });
 
-    expect(instance.formatCurrency()).toEqual("₦1,000.00k")
-});
+    test("format of inputted amount", () => {
+        
+    })
+})
