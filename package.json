@@ -4,20 +4,21 @@
   "description": "A library for returning formatted currencies",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devallisamuel/Currencify.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "samuel alli",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/devallisamuel/Currencify/issues"
   },
   "homepage": "https://github.com/devallisamuel/Currencify#readme",
   "devDependencies": {
+    "@types/jest": "^29.5.11",
     "typescript": "^5.3.3"
   },
   "dependencies": {
