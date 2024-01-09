@@ -2,7 +2,7 @@ import {Currencify} from "./index";
 
 describe("instantiation of the Currencify class", () => {
     let instance:Currencify;
-    beforeEach(() => instance = new Currencify("Nigeria","1000.00"))
+    beforeEach(() => instance = new Currencify("Nigeria",))
     test("equality of country",() => {
     
       expect(instance.currency.country).toEqual("Nigeria");
@@ -13,7 +13,7 @@ describe("instantiation of the Currencify class", () => {
     });
 
     test("format of inputted amount", () => {
-        const result = instance.formatCurrency();
+        const result = instance.formatCurrency("1000.00");
         expect(result).toEqual("₦1,000.00k");
     });
 })

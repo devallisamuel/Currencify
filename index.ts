@@ -5,6 +5,7 @@ export class Currencify {
   invalid: boolean = false;
   prefix: string = "";
   suffix: string = "";
+  amount: string = "";
   currency: Currency = {
     start: "",
     end: "",
@@ -13,7 +14,7 @@ export class Currencify {
 
   regex = /^[A-Za-z !@#$%^&*()_+={}[\]:;<>,?~\\/-]+$/;
 
-  constructor(private country: string, private amount: string) {
+  constructor(private country: string) {
     store.forEach((val) => {
       if (
         val.country.toLocaleLowerCase() === this.country.toLocaleLowerCase()
@@ -23,8 +24,9 @@ export class Currencify {
     });
   }
 
-  formatCurrency() {
+  formatCurrency(amount:string) {
     try {
+        this.amount = amount;
       if (!this.currency?.country || this.regex.test(this.amount)) {
         this.invalid = true;
         throw Error("Invalid Input Format");
