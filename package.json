@@ -1,6 +1,6 @@
 {
   "name": "currencify",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "A library for returning formatted currencies",
   "main": "index.ts",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/devallisamuel/Currencify.git"
   },
-  "keywords": [],
+  "keywords": ["Format currencies"],
   "author": "samuel alli",
   "license": "ISC",
   "bugs": {
