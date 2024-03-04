@@ -1,7 +1,7 @@
 import { store } from "./store";
 import { Currency } from "./type";
 
-export class Currencify {
+ class Currencify {
   invalid: boolean = false;
   prefix: string = "";
   suffix: string = "";
@@ -44,3 +44,6 @@ export class Currencify {
     }
   }
 }
+
+
+export default Currencify;
