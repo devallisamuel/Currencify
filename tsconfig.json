@@ -1,19 +1,19 @@
-{
-  "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "isolatedModules": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true,
-    "checkJs": true
-  },
-  "include": ["./**/*.ts", "index.ts"],
-  "exclude": ["node_modules", "build", "dist", "public"]
-}
+// {
+//   "compilerOptions": {
+//     "target": "es6",
+//     "module": "commonjs",
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "moduleResolution": "node",
+//     "isolatedModules": true,
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "allowJs": true,
+//     "checkJs": true
+//   },
+//   "include": ["./**/*.ts", "index.js", "index.test.js"],
+//   "exclude": ["node_modules", "build", "dist", "public"]
+// }
