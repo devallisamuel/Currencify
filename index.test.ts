@@ -1,4 +1,4 @@
-import {Currencify} from "./index";
+import Currencify from "./index";
 
 describe("instantiation of the Currencify class", () => {
     let instance:Currencify;
